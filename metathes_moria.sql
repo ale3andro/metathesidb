@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.3.9.2
+-- version 3.3.10deb1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 15, 2011 at 11:48 AM
--- Server version: 5.0.92
--- PHP Version: 5.2.4
+-- Generation Time: May 15, 2011 at 11:03 PM
+-- Server version: 5.1.54
+-- PHP Version: 5.3.5-1ubuntu7.2
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -28,11 +28,11 @@ USE `metathes_moria`;
 --
 
 CREATE TABLE IF NOT EXISTS `a_areas` (
-  `id` int(11) NOT NULL auto_increment,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `dipe_id` int(11) NOT NULL,
   `description` varchar(40) NOT NULL,
   `ypepth_code` varchar(4) NOT NULL,
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=81 ;
 
 --
@@ -128,13 +128,13 @@ INSERT INTO `a_areas` (`id`, `dipe_id`, `description`, `ypepth_code`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `a_bases` (
-  `id` int(11) NOT NULL auto_increment,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `specialty_id` int(11) NOT NULL,
   `area_code` varchar(4) NOT NULL,
   `points` float NOT NULL,
   `how_many_in` int(11) NOT NULL,
   `year` varchar(4) NOT NULL,
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1520 ;
 
 --
@@ -1590,9 +1590,9 @@ INSERT INTO `a_bases` (`id`, `specialty_id`, `area_code`, `points`, `how_many_in
 --
 
 CREATE TABLE IF NOT EXISTS `a_school_types` (
-  `id` tinyint(4) NOT NULL auto_increment,
+  `id` tinyint(4) NOT NULL AUTO_INCREMENT,
   `description` varchar(50) NOT NULL,
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
@@ -1610,7 +1610,7 @@ INSERT INTO `a_school_types` (`id`, `description`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `a_schools` (
-  `id` int(11) NOT NULL auto_increment,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` int(11) NOT NULL,
   `points` int(11) NOT NULL,
   `area_id` int(11) NOT NULL,
@@ -1620,7 +1620,7 @@ CREATE TABLE IF NOT EXISTS `a_schools` (
   `eidiko` int(11) NOT NULL,
   `number` varchar(5) NOT NULL,
   `new_program` int(11) NOT NULL,
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC AUTO_INCREMENT=12404 ;
 
 --
@@ -13799,10 +13799,10 @@ INSERT INTO `a_schools` (`id`, `type`, `points`, `area_id`, `dipe_id`, `descript
 --
 
 CREATE TABLE IF NOT EXISTS `a_specialties` (
-  `id` tinyint(4) NOT NULL auto_increment,
+  `id` tinyint(4) NOT NULL AUTO_INCREMENT,
   `code` varchar(10) NOT NULL,
   `description` varchar(50) NOT NULL,
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
@@ -13823,11 +13823,11 @@ INSERT INTO `a_specialties` (`id`, `code`, `description`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `b_areas` (
-  `id` int(11) NOT NULL auto_increment,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `dide_id` int(11) NOT NULL,
   `description` varchar(40) NOT NULL,
   `ypepth_code` varchar(4) NOT NULL,
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=180 ;
 
 --
@@ -14022,13 +14022,13 @@ INSERT INTO `b_areas` (`id`, `dide_id`, `description`, `ypepth_code`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `b_bases` (
-  `id` int(11) NOT NULL auto_increment,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `specialty_id` int(11) NOT NULL,
   `area_code` varchar(10) NOT NULL,
   `points` float NOT NULL,
   `how_many_in` int(11) NOT NULL,
   `year` varchar(4) NOT NULL,
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11681 ;
 
 --
@@ -25383,24 +25383,24 @@ INSERT INTO `b_bases` (`id`, `specialty_id`, `area_code`, `points`, `how_many_in
 (11240, 7, '56', 59.5, 1, '2011'),
 (11239, 7, '51', 13.66, 1, '2011'),
 (11238, 7, '27', 14.27, 3, '2011'),
-(11237, 6, '173', 124.6, 1, '2011'),
-(11236, 6, '131', 15.1, 2, '2011'),
-(11235, 6, '111', 80.18, 3, '2011'),
-(11234, 6, '39', 196.97, 1, '2011'),
-(11233, 5, '173', 116.28, 2, '2011'),
-(11232, 5, '154', 81.1, 2, '2011'),
-(11231, 5, '133', 51.97, 2, '2011'),
-(11230, 5, '111', 72.5, 1, '2011'),
-(11229, 5, '105', 100.04, 1, '2011'),
-(11228, 5, '97', 87.43, 1, '2011'),
-(11227, 5, '92', 66.23, 1, '2011'),
-(11226, 5, '65', 87.82, 2, '2011'),
-(11225, 5, '32', 123.38, 3, '2011'),
-(11224, 5, '29', 66.03, 1, '2011'),
-(11223, 5, '22', 81.48, 5, '2011'),
-(11222, 5, '21', 134.11, 3, '2011'),
-(11221, 5, '20', 150.46, 3, '2011'),
-(11220, 5, '8', 90.06, 2, '2011'),
+(11237, 5, '173', 124.6, 1, '2011'),
+(11236, 5, '131', 15.1, 2, '2011'),
+(11235, 5, '111', 80.18, 3, '2011'),
+(11234, 5, '39', 196.97, 1, '2011'),
+(11233, 6, '173', 116.28, 2, '2011'),
+(11232, 6, '154', 81.1, 2, '2011'),
+(11231, 6, '133', 51.97, 2, '2011'),
+(11230, 6, '111', 72.5, 1, '2011'),
+(11229, 6, '105', 100.04, 1, '2011'),
+(11228, 6, '97', 87.43, 1, '2011'),
+(11227, 6, '92', 66.23, 1, '2011'),
+(11226, 6, '65', 87.82, 2, '2011'),
+(11225, 6, '32', 123.38, 3, '2011'),
+(11224, 6, '29', 66.03, 1, '2011'),
+(11223, 6, '22', 81.48, 5, '2011'),
+(11222, 6, '21', 134.11, 3, '2011'),
+(11221, 6, '20', 150.46, 3, '2011'),
+(11220, 6, '8', 90.06, 2, '2011'),
 (11219, 3, '175', 26.62, 4, '2011'),
 (11218, 3, '173', 12.49, 7, '2011'),
 (11217, 3, '171', 42.23, 1, '2011'),
@@ -25594,13 +25594,13 @@ INSERT INTO `b_bases` (`id`, `specialty_id`, `area_code`, `points`, `how_many_in
 --
 
 CREATE TABLE IF NOT EXISTS `b_bases_old` (
-  `id` int(11) NOT NULL auto_increment,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `specialty_id` int(11) NOT NULL,
   `area_code` varchar(10) NOT NULL,
   `points` float NOT NULL,
   `how_many_in` int(11) NOT NULL,
   `year` varchar(4) NOT NULL,
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11101 ;
 
 --
@@ -36613,9 +36613,9 @@ INSERT INTO `b_bases_old` (`id`, `specialty_id`, `area_code`, `points`, `how_man
 --
 
 CREATE TABLE IF NOT EXISTS `b_school_types` (
-  `id` tinyint(4) NOT NULL auto_increment,
+  `id` tinyint(4) NOT NULL AUTO_INCREMENT,
   `description` varchar(40) NOT NULL,
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
@@ -36635,28 +36635,28 @@ INSERT INTO `b_school_types` (`id`, `description`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `b_schools` (
-  `id` int(11) NOT NULL auto_increment,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `number` varchar(5) NOT NULL,
   `type` tinyint(4) NOT NULL,
   `municipality` varchar(40) NOT NULL,
   `points` tinyint(4) NOT NULL,
   `dide_id` int(11) NOT NULL,
   `area_id` int(11) NOT NULL,
-  `esperino` tinyint(4) NOT NULL default '0',
-  `peiramatiko` tinyint(4) NOT NULL default '0',
-  `mousiko` tinyint(4) NOT NULL default '0',
-  `lykeiakes_ta3eis` tinyint(4) NOT NULL default '0',
-  `gymnasiako_parartima` tinyint(4) NOT NULL default '0',
-  `anaphrwn` tinyint(4) NOT NULL default '0',
-  `pallinostountwn` tinyint(4) NOT NULL default '0',
-  `kwfalalwn` tinyint(4) NOT NULL default '0',
-  `eeeek` tinyint(4) NOT NULL default '0',
-  `ekklhsiastiko` tinyint(4) NOT NULL default '0',
-  `diapolitismiko` tinyint(4) NOT NULL default '0',
-  `a8lhtiko` tinyint(4) NOT NULL default '0',
-  `kallitexniko` tinyint(4) NOT NULL default '0',
-  `to_delete` tinyint(4) NOT NULL default '0',
-  PRIMARY KEY  (`id`)
+  `esperino` tinyint(4) NOT NULL DEFAULT '0',
+  `peiramatiko` tinyint(4) NOT NULL DEFAULT '0',
+  `mousiko` tinyint(4) NOT NULL DEFAULT '0',
+  `lykeiakes_ta3eis` tinyint(4) NOT NULL DEFAULT '0',
+  `gymnasiako_parartima` tinyint(4) NOT NULL DEFAULT '0',
+  `anaphrwn` tinyint(4) NOT NULL DEFAULT '0',
+  `pallinostountwn` tinyint(4) NOT NULL DEFAULT '0',
+  `kwfalalwn` tinyint(4) NOT NULL DEFAULT '0',
+  `eeeek` tinyint(4) NOT NULL DEFAULT '0',
+  `ekklhsiastiko` tinyint(4) NOT NULL DEFAULT '0',
+  `diapolitismiko` tinyint(4) NOT NULL DEFAULT '0',
+  `a8lhtiko` tinyint(4) NOT NULL DEFAULT '0',
+  `kallitexniko` tinyint(4) NOT NULL DEFAULT '0',
+  `to_delete` tinyint(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3827 ;
 
 --
@@ -40308,7 +40308,7 @@ INSERT INTO `b_specialties` (`id`, `code`, `description`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `provinces` (
-  `id` tinyint(4) NOT NULL auto_increment,
+  `id` tinyint(4) NOT NULL AUTO_INCREMENT,
   `description` varchar(50) NOT NULL,
   `B_url` varchar(100) NOT NULL,
   `A_url` varchar(100) NOT NULL,
@@ -40318,7 +40318,7 @@ CREATE TABLE IF NOT EXISTS `provinces` (
   `B_fax` varchar(10) NOT NULL,
   `A_telephone` varchar(10) NOT NULL,
   `A_fax` varchar(10) NOT NULL,
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=59 ;
 
 --
@@ -40392,12 +40392,12 @@ INSERT INTO `provinces` (`id`, `description`, `B_url`, `A_url`, `pde_id`, `map_l
 --
 
 CREATE TABLE IF NOT EXISTS `regions` (
-  `id` tinyint(4) NOT NULL auto_increment,
+  `id` tinyint(4) NOT NULL AUTO_INCREMENT,
   `description` varchar(200) NOT NULL,
   `url` varchar(200) NOT NULL,
   `telephone` varchar(10) NOT NULL,
   `fax` varchar(10) NOT NULL,
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
