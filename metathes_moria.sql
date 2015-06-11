@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.11.1deb2
+-- version 4.0.10deb1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Jul 25, 2014 at 11:24 AM
--- Server version: 5.5.35
--- PHP Version: 5.4.4-14+deb7u8
+-- Φιλοξενητής: localhost
+-- Χρόνος δημιουργίας: 11 Ιουν 2015 στις 11:09:18
+-- Έκδοση διακομιστή: 5.5.40-0ubuntu0.14.04.1
+-- Έκδοση PHP: 5.5.9-1ubuntu4.5
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,15 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `metathes_moria`
+-- Βάση: `metathes_moria`
 --
-CREATE DATABASE `metathes_moria` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `metathes_moria`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `a_areas`
+-- Δομή πίνακα για τον πίνακα `a_areas`
 --
 
 CREATE TABLE IF NOT EXISTS `a_areas` (
@@ -38,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `a_areas` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1081 ;
 
 --
--- Dumping data for table `a_areas`
+-- Άδειασμα δεδομένων του πίνακα `a_areas`
 --
 
 INSERT INTO `a_areas` (`id`, `dipe_id`, `description`, `ypepth_code`, `full_name`) VALUES
@@ -191,7 +189,7 @@ INSERT INTO `a_areas` (`id`, `dipe_id`, `description`, `ypepth_code`, `full_name
 -- --------------------------------------------------------
 
 --
--- Table structure for table `a_bases`
+-- Δομή πίνακα για τον πίνακα `a_bases`
 --
 
 CREATE TABLE IF NOT EXISTS `a_bases` (
@@ -202,10 +200,10 @@ CREATE TABLE IF NOT EXISTS `a_bases` (
   `how_many_in` int(11) NOT NULL,
   `year` varchar(4) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2126 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2241 ;
 
 --
--- Dumping data for table `a_bases`
+-- Άδειασμα δεδομένων του πίνακα `a_bases`
 --
 
 INSERT INTO `a_bases` (`id`, `specialty_id`, `area_code`, `points`, `how_many_in`, `year`) VALUES
@@ -2105,12 +2103,127 @@ INSERT INTO `a_bases` (`id`, `specialty_id`, `area_code`, `points`, `how_many_in
 (1808, 3, '11', 82.81, 1, '2014'),
 (1807, 3, '3', 116.35, 16, '2014'),
 (1806, 3, '1', 45.21, 16, '2014'),
-(1805, 3, '19', 54.8, 31, '2014');
+(1805, 3, '19', 54.8, 31, '2014'),
+(2126, 2, '57', 77.74, 52, '2015'),
+(2127, 2, '56', 67.56, 44, '2015'),
+(2128, 2, '3', 94.48, 42, '2015'),
+(2129, 2, '61', 71.93, 21, '2015'),
+(2130, 2, '37', 39.3, 55, '2015'),
+(2131, 2, '1', 30.03, 17, '2015'),
+(2132, 2, '64', 68.65, 29, '2015'),
+(2133, 2, '51', 40.86, 11, '2015'),
+(2134, 2, '32', 37.7, 7, '2015'),
+(2135, 2, '55', 33.98, 6, '2015'),
+(2136, 2, '58', 51.06, 30, '2015'),
+(2137, 2, '19', 21.95, 103, '2015'),
+(2138, 2, '18', 56.49, 2, '2015'),
+(2139, 2, '65', 57.33, 37, '2015'),
+(2140, 2, '42', 68.97, 2, '2015'),
+(2141, 2, '40', 32.2, 3, '2015'),
+(2142, 2, '26', 34.18, 21, '2015'),
+(2143, 2, '48', 76.54, 8, '2015'),
+(2144, 2, '22', 297.89, 1, '2015'),
+(2145, 2, '2', 28.15, 8, '2015'),
+(2146, 2, '17', 132.58, 1, '2015'),
+(2147, 2, '13', 74.33, 36, '2015'),
+(2148, 2, '24', 59.76, 11, '2015'),
+(2149, 2, '28', 44.52, 49, '2015'),
+(2150, 2, '31', 180.8, 1, '2015'),
+(2151, 2, '27', 31.83, 41, '2015'),
+(2152, 2, '25', 35.62, 59, '2015'),
+(2153, 2, '38', 111.25, 6, '2015'),
+(2154, 2, '30', 72.49, 15, '2015'),
+(2155, 2, '60', 55, 25, '2015'),
+(2156, 2, '23', 37.03, 30, '2015'),
+(2157, 2, '34', 52.93, 23, '2015'),
+(2158, 2, '41', 69.95, 45, '2015'),
+(2159, 2, '63', 104.31, 22, '2015'),
+(2160, 2, '50', 77.18, 32, '2015'),
+(2161, 2, '35', 135.06, 15, '2015'),
+(2162, 2, '45', 96.14, 44, '2015'),
+(2163, 2, '44', 62.65, 47, '2015'),
+(2164, 2, '43', 85.25, 26, '2015'),
+(2165, 2, '39', 43.44, 5, '2015'),
+(2166, 2, '9', 96.03, 35, '2015'),
+(2167, 2, '14', 52.02, 14, '2015'),
+(2168, 2, '46', 63.68, 22, '2015'),
+(2169, 2, '54', 33.6, 7, '2015'),
+(2170, 2, '62', 56.03, 19, '2015'),
+(2171, 2, '15', 26.4, 8, '2015'),
+(2172, 2, '49', 41.36, 6, '2015'),
+(2173, 2, '53', 64.51, 2, '2015'),
+(2174, 2, '59', 49.35, 5, '2015'),
+(2175, 2, '11', 33.69, 8, '2015'),
+(2176, 2, '12', 46.14, 17, '2015'),
+(2177, 2, '29', 37.41, 4, '2015'),
+(2178, 2, '20', 36.55, 9, '2015'),
+(2179, 2, '33', 30.85, 4, '2015'),
+(2180, 2, '5', 51.93, 4, '2015'),
+(2181, 2, '36', 40.7, 2, '2015'),
+(2182, 2, '7', 48.68, 2, '2015'),
+(2183, 2, '47', 30.51, 7, '2015'),
+(2184, 2, '52', 77.68, 1, '2015'),
+(2185, 2, '21', 43.32, 3, '2015'),
+(2186, 2, '66', 45.32, 1, '2015'),
+(2187, 2, '16', 48.36, 1, '2015'),
+(2188, 1, '28', 68.27, 4, '2015'),
+(2189, 1, '3', 92.06, 10, '2015'),
+(2190, 1, '9', 115.81, 6, '2015'),
+(2191, 1, '41', 57.28, 6, '2015'),
+(2192, 1, '55', 83.66, 1, '2015'),
+(2193, 1, '35', 38, 3, '2015'),
+(2194, 1, '25', 63.83, 10, '2015'),
+(2195, 1, '63', 63.85, 12, '2015'),
+(2196, 1, '56', 39.64, 17, '2015'),
+(2197, 1, '4', 90.14, 4, '2015'),
+(2198, 1, '52', 114.58, 1, '2015'),
+(2199, 1, '2', 20.61, 7, '2015'),
+(2200, 1, '57', 76.77, 5, '2015'),
+(2201, 1, '13', 75.27, 10, '2015'),
+(2202, 1, '19', 45.16, 23, '2015'),
+(2203, 1, '15', 40.65, 12, '2015'),
+(2204, 1, '27', 35.76, 19, '2015'),
+(2205, 1, '42', 53.87, 3, '2015'),
+(2206, 1, '20', 34.03, 6, '2015'),
+(2207, 1, '29', 53.11, 2, '2015'),
+(2208, 1, '31', 21.27, 8, '2015'),
+(2209, 1, '1', 34.65, 12, '2015'),
+(2210, 1, '24', 76.98, 5, '2015'),
+(2211, 1, '39', 52.86, 2, '2015'),
+(2212, 1, '40', 33.31, 2, '2015'),
+(2213, 1, '51', 48.47, 3, '2015'),
+(2214, 1, '61', 31.99, 13, '2015'),
+(2215, 1, '58', 59.83, 4, '2015'),
+(2216, 1, '65', 34.28, 3, '2015'),
+(2217, 1, '22', 58.6, 1, '2015'),
+(2218, 1, '64', 55.95, 5, '2015'),
+(2219, 1, '50', 44.89, 10, '2015'),
+(2220, 1, '14', 49.98, 5, '2015'),
+(2221, 1, '49', 24.03, 2, '2015'),
+(2222, 1, '48', 68.44, 4, '2015'),
+(2223, 1, '60', 75.91, 1, '2015'),
+(2224, 1, '23', 31.03, 4, '2015'),
+(2225, 1, '37', 54.92, 6, '2015'),
+(2226, 1, '44', 24.12, 5, '2015'),
+(2227, 1, '12', 56, 2, '2015'),
+(2228, 1, '34', 50.74, 2, '2015'),
+(2229, 1, '46', 55.27, 2, '2015'),
+(2230, 1, '11', 80.65, 1, '2015'),
+(2231, 1, '66', 52.64, 1, '2015'),
+(2232, 1, '47', 69.15, 1, '2015'),
+(2233, 1, '32', 26.75, 4, '2015'),
+(2234, 1, '38', 46.86, 2, '2015'),
+(2235, 1, '30', 47.83, 2, '2015'),
+(2236, 1, '21', 46.33, 2, '2015'),
+(2237, 1, '53', 26.24, 1, '2015'),
+(2238, 1, '59', 42.78, 1, '2015'),
+(2239, 1, '62', 65.28, 1, '2015'),
+(2240, 1, '7', 56.98, 1, '2015');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `a_school_types`
+-- Δομή πίνακα για τον πίνακα `a_school_types`
 --
 
 CREATE TABLE IF NOT EXISTS `a_school_types` (
@@ -2120,7 +2233,7 @@ CREATE TABLE IF NOT EXISTS `a_school_types` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `a_school_types`
+-- Άδειασμα δεδομένων του πίνακα `a_school_types`
 --
 
 INSERT INTO `a_school_types` (`id`, `description`) VALUES
@@ -2130,7 +2243,7 @@ INSERT INTO `a_school_types` (`id`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `a_schools`
+-- Δομή πίνακα για τον πίνακα `a_schools`
 --
 
 CREATE TABLE IF NOT EXISTS `a_schools` (
@@ -2148,7 +2261,7 @@ CREATE TABLE IF NOT EXISTS `a_schools` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC AUTO_INCREMENT=12404 ;
 
 --
--- Dumping data for table `a_schools`
+-- Άδειασμα δεδομένων του πίνακα `a_schools`
 --
 
 INSERT INTO `a_schools` (`id`, `type`, `points`, `area_id`, `dipe_id`, `description`, `oloimero`, `eidiko`, `number`, `new_program`) VALUES
@@ -14319,7 +14432,7 @@ INSERT INTO `a_schools` (`id`, `type`, `points`, `area_id`, `dipe_id`, `descript
 -- --------------------------------------------------------
 
 --
--- Table structure for table `a_specialties`
+-- Δομή πίνακα για τον πίνακα `a_specialties`
 --
 
 CREATE TABLE IF NOT EXISTS `a_specialties` (
@@ -14330,7 +14443,7 @@ CREATE TABLE IF NOT EXISTS `a_specialties` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
--- Dumping data for table `a_specialties`
+-- Άδειασμα δεδομένων του πίνακα `a_specialties`
 --
 
 INSERT INTO `a_specialties` (`id`, `code`, `description`) VALUES
@@ -14343,7 +14456,7 @@ INSERT INTO `a_specialties` (`id`, `code`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `b_areas`
+-- Δομή πίνακα για τον πίνακα `b_areas`
 --
 
 CREATE TABLE IF NOT EXISTS `b_areas` (
@@ -14356,7 +14469,7 @@ CREATE TABLE IF NOT EXISTS `b_areas` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1180 ;
 
 --
--- Dumping data for table `b_areas`
+-- Άδειασμα δεδομένων του πίνακα `b_areas`
 --
 
 INSERT INTO `b_areas` (`id`, `dide_id`, `description`, `ypepth_code`, `full_name`) VALUES
@@ -14615,7 +14728,7 @@ INSERT INTO `b_areas` (`id`, `dide_id`, `description`, `ypepth_code`, `full_name
 -- --------------------------------------------------------
 
 --
--- Table structure for table `b_bases`
+-- Δομή πίνακα για τον πίνακα `b_bases`
 --
 
 CREATE TABLE IF NOT EXISTS `b_bases` (
@@ -14629,7 +14742,7 @@ CREATE TABLE IF NOT EXISTS `b_bases` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13035 ;
 
 --
--- Dumping data for table `b_bases`
+-- Άδειασμα δεδομένων του πίνακα `b_bases`
 --
 
 INSERT INTO `b_bases` (`id`, `specialty_id`, `area_code`, `points`, `how_many_in`, `year`) VALUES
@@ -27290,7 +27403,7 @@ INSERT INTO `b_bases` (`id`, `specialty_id`, `area_code`, `points`, `how_many_in
 -- --------------------------------------------------------
 
 --
--- Table structure for table `b_school_types`
+-- Δομή πίνακα για τον πίνακα `b_school_types`
 --
 
 CREATE TABLE IF NOT EXISTS `b_school_types` (
@@ -27300,7 +27413,7 @@ CREATE TABLE IF NOT EXISTS `b_school_types` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
--- Dumping data for table `b_school_types`
+-- Άδειασμα δεδομένων του πίνακα `b_school_types`
 --
 
 INSERT INTO `b_school_types` (`id`, `description`) VALUES
@@ -27312,7 +27425,7 @@ INSERT INTO `b_school_types` (`id`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `b_schools`
+-- Δομή πίνακα για τον πίνακα `b_schools`
 --
 
 CREATE TABLE IF NOT EXISTS `b_schools` (
@@ -27342,7 +27455,7 @@ CREATE TABLE IF NOT EXISTS `b_schools` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3827 ;
 
 --
--- Dumping data for table `b_schools`
+-- Άδειασμα δεδομένων του πίνακα `b_schools`
 --
 
 INSERT INTO `b_schools` (`id`, `number`, `type`, `municipality`, `points`, `dide_id`, `area_id`, `esperino`, `peiramatiko`, `mousiko`, `lykeiakes_ta3eis`, `gymnasiako_parartima`, `anaphrwn`, `pallinostountwn`, `kwfalalwn`, `eeeek`, `ekklhsiastiko`, `diapolitismiko`, `a8lhtiko`, `kallitexniko`, `to_delete`, `municipality_id`) VALUES
@@ -30855,7 +30968,7 @@ INSERT INTO `b_schools` (`id`, `number`, `type`, `municipality`, `points`, `dide
 -- --------------------------------------------------------
 
 --
--- Table structure for table `b_specialties`
+-- Δομή πίνακα για τον πίνακα `b_specialties`
 --
 
 CREATE TABLE IF NOT EXISTS `b_specialties` (
@@ -30867,7 +30980,7 @@ CREATE TABLE IF NOT EXISTS `b_specialties` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `b_specialties`
+-- Άδειασμα δεδομένων του πίνακα `b_specialties`
 --
 
 INSERT INTO `b_specialties` (`id`, `code`, `description`, `ypepth_code`) VALUES
@@ -31005,7 +31118,7 @@ INSERT INTO `b_specialties` (`id`, `code`, `description`, `ypepth_code`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `municipalities`
+-- Δομή πίνακα για τον πίνακα `municipalities`
 --
 
 CREATE TABLE IF NOT EXISTS `municipalities` (
@@ -31020,7 +31133,7 @@ CREATE TABLE IF NOT EXISTS `municipalities` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `municipalities`
+-- Άδειασμα δεδομένων του πίνακα `municipalities`
 --
 
 INSERT INTO `municipalities` (`id`, `level_1`, `level_2`, `kallikratis_code`, `description`, `a_area_id`, `b_area_id`) VALUES
@@ -51772,7 +51885,7 @@ INSERT INTO `municipalities` (`id`, `level_1`, `level_2`, `kallikratis_code`, `d
 -- --------------------------------------------------------
 
 --
--- Table structure for table `provinces`
+-- Δομή πίνακα για τον πίνακα `provinces`
 --
 
 CREATE TABLE IF NOT EXISTS `provinces` (
@@ -51790,7 +51903,7 @@ CREATE TABLE IF NOT EXISTS `provinces` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=59 ;
 
 --
--- Dumping data for table `provinces`
+-- Άδειασμα δεδομένων του πίνακα `provinces`
 --
 
 INSERT INTO `provinces` (`id`, `description`, `B_url`, `A_url`, `pde_id`, `map_link`, `B_telephone`, `B_fax`, `A_telephone`, `A_fax`) VALUES
@@ -51856,7 +51969,7 @@ INSERT INTO `provinces` (`id`, `description`, `B_url`, `A_url`, `pde_id`, `map_l
 -- --------------------------------------------------------
 
 --
--- Table structure for table `regions`
+-- Δομή πίνακα για τον πίνακα `regions`
 --
 
 CREATE TABLE IF NOT EXISTS `regions` (
@@ -51869,7 +51982,7 @@ CREATE TABLE IF NOT EXISTS `regions` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
--- Dumping data for table `regions`
+-- Άδειασμα δεδομένων του πίνακα `regions`
 --
 
 INSERT INTO `regions` (`id`, `description`, `url`, `telephone`, `fax`) VALUES
