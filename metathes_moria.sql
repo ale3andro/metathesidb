@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6deb4
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Apr 06, 2019 at 11:28 PM
--- Server version: 10.1.37-MariaDB-0+deb9u1
--- PHP Version: 7.0.33-0+deb9u3
+-- Host: localhost
+-- Generation Time: Apr 07, 2020 at 07:37 PM
+-- Server version: 10.3.22-MariaDB-0+deb10u1
+-- PHP Version: 7.3.14-1~deb10u1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -441,7 +443,39 @@ INSERT INTO `a_areas_match` (`description`, `id`, `year`) VALUES
 ('ΑΡΓΟΛΙΔΑΣ (Π.Ε.)', 23, '2019'),
 ('Γ ́ ΚΥΚΛΑΔΩΝ (Π.Ε.)', 62, '2019'),
 ('Α ́ ΚΕΡΚΥΡΑΣ (Π.Ε.)', 55, '2019'),
-('Α ́ ΧΙΟΥ (Π.Ε.)', 5, '2019');
+('Α ́ ΧΙΟΥ (Π.Ε.)', 5, '2019'),
+('Β΄ ΘΕΣΣΑΛΟΝΙΚΗΣ (Π.Ε.)', 4, '2020'),
+('Α΄ ΘΕΣΣΑΛΟΝΙΚΗΣ (Π.Ε.)', 3, '2020'),
+('Α΄ ΚΑΒΑΛΑΣ (Π.Ε.)', 51, '2020'),
+('Α΄ ΑΘΗΝΑΣ (Π.Ε.)', 21, '2020'),
+('Γ΄ ΑΘΗΝΑΣ (Π.Ε.)', 29, '2020'),
+('Β΄ ΛΕΣΒΟΥ (Π.Ε.)', 11, '2020'),
+('Β΄ ΑΘΗΝΑΣ (Π.Ε.)', 27, '2020'),
+('Γ΄ ΚΥΚΛΑΔΩΝ (Π.Ε.)', 62, '2020'),
+('Δ΄ ΑΘΗΝΑΣ (Π.Ε.)', 30, '2020'),
+('Α΄ ΛΕΣΒΟΥ (Π.Ε.)', 10, '2020'),
+('ΤΡΙΚΑΛΩΝ (Π.Ε.)', 75, '2020'),
+('Β΄ ΜΑΓΝΗΣΙΑΣ (Π.Ε.)', 14, '2020'),
+('Α΄ ΚΕΡΚΥΡΑΣ (Π.Ε.)', 55, '2020'),
+('Α΄ ΕΒΡΟΥ (Π.Ε.)', 40, '2020'),
+('Α΄ ΔΩΔΕΚΑΝΗΣΟΥ (Π.Ε.)', 31, '2020'),
+('Α΄ ΚΕΦΑΛΛΗΝΙΑΣ (Π.Ε.)', 7, '2020'),
+('Α΄ ΠΕΙΡΑΙΑ (Π.Ε.)', 15, '2020'),
+('Β΄ ΚΑΒΑΛΑΣ (Π.Ε.)', 52, '2020'),
+('Α΄ ΜΑΓΝΗΣΙΑΣ (Π.Ε.)', 13, '2020'),
+('Β΄ ΣΑΜΟΥ (Π.Ε.)', 19, '2020'),
+('Α΄ ΑΝΑΤ. ΑΤΤΙΚΗΣ (Π.Ε.)', 1, '2020'),
+('ΚΑΡΔΙΤΣΑΣ (Π.Ε.)', 53, '2020'),
+('Β΄ ΔΩΔΕΚΑΝΗΣΟΥ (Π.Ε.)', 32, '2020'),
+('Δ΄ ΔΩΔΕΚΑΝΗΣΟΥ (Π.Ε.)', 34, '2020'),
+('Β΄ ΠΕΙΡΑΙΑ (Π.Ε.)', 16, '2020'),
+('Β΄ ΑΝΑΤ. ΑΤΤΙΚΗΣ (Π.Ε.)', 2, '2020'),
+('Δ΄ ΚΥΚΛΑΔΩΝ (Π.Ε.)', 63, '2020'),
+('Α΄ ΧΙΟΥ (Π.Ε.)', 5, '2020'),
+('Α΄ ΚΥΚΛΑΔΩΝ (Π.Ε.)', 60, '2020'),
+('Β΄ ΚΥΚΛΑΔΩΝ (Π.Ε.)', 61, '2020'),
+('Α΄ ΕΥΒΟΙΑΣ (Π.Ε.)', 37, '2020'),
+('Β΄ ΕΥΒΟΙΑΣ (Π.Ε.)', 38, '2020');
 
 -- --------------------------------------------------------
 
@@ -3105,7 +3139,152 @@ INSERT INTO `a_bases` (`id`, `specialty_id`, `area_code`, `points`, `how_many_in
 (3098, 1, '55', 67.72, 1, '2019'),
 (3099, 1, '51', 70.15, 1, '2019'),
 (3100, 1, '22', 51.65, 1, '2019'),
-(3101, 11, '30', 49.18, 1, '2019');
+(3101, 11, '30', 49.18, 1, '2019'),
+(3102, 7, '27', 134.36, 1, '2020'),
+(3103, 7, '48', 138.11, 1, '2020'),
+(3104, 7, '9', 50.58, 2, '2020'),
+(3105, 7, '21', 117.04, 1, '2020'),
+(3106, 7, '29', 101.35, 1, '2020'),
+(3107, 2, '30', 47.73, 35, '2020'),
+(3108, 2, '75', 140.84, 20, '2020'),
+(3109, 2, '4', 115.97, 45, '2020'),
+(3110, 2, '1', 65.76, 8, '2020'),
+(3111, 2, '22', 69.01, 2, '2020'),
+(3112, 2, '69', 125.72, 9, '2020'),
+(3113, 2, '13', 94.49, 35, '2020'),
+(3114, 2, '21', 50.66, 46, '2020'),
+(3115, 2, '27', 53.45, 32, '2020'),
+(3116, 2, '29', 53.89, 13, '2020'),
+(3117, 2, '3', 128.41, 30, '2020'),
+(3118, 2, '40', 67.9, 10, '2020'),
+(3119, 2, '24', 129.41, 1, '2020'),
+(3120, 2, '53', 188.7, 2, '2020'),
+(3121, 2, '7', 60.13, 2, '2020'),
+(3122, 2, '57', 102.08, 9, '2020'),
+(3123, 2, '49', 57.91, 6, '2020'),
+(3124, 2, '44', 57.56, 14, '2020'),
+(3125, 2, '50', 111.91, 24, '2020'),
+(3126, 2, '62', 120.9, 4, '2020'),
+(3127, 2, '23', 106.69, 2, '2020'),
+(3128, 2, '14', 55.33, 17, '2020');
+INSERT INTO `a_bases` (`id`, `specialty_id`, `area_code`, `points`, `how_many_in`, `year`) VALUES
+(3129, 2, '67', 90.15, 5, '2020'),
+(3130, 2, '26', 55.72, 14, '2020'),
+(3131, 2, '76', 89.6, 22, '2020'),
+(3132, 2, '59', 93.1, 25, '2020'),
+(3133, 2, '58', 96.83, 3, '2020'),
+(3134, 2, '72', 73.2, 16, '2020'),
+(3135, 2, '74', 82.83, 14, '2020'),
+(3136, 2, '45', 116.61, 3, '2020'),
+(3137, 2, '25', 62.16, 7, '2020'),
+(3138, 2, '51', 86.8, 18, '2020'),
+(3139, 2, '9', 130.24, 30, '2020'),
+(3140, 2, '73', 108.09, 5, '2020'),
+(3141, 2, '28', 108.59, 1, '2020'),
+(3142, 2, '42', 180.94, 5, '2020'),
+(3143, 2, '46', 58.9, 4, '2020'),
+(3144, 2, '68', 107.56, 4, '2020'),
+(3145, 2, '15', 58.64, 5, '2020'),
+(3146, 2, '37', 90.83, 1, '2020'),
+(3147, 2, '70', 77.57, 9, '2020'),
+(3148, 2, '66', 139.91, 1, '2020'),
+(3149, 2, '71', 58.4, 3, '2020'),
+(3150, 2, '38', 105.25, 2, '2020'),
+(3151, 2, '77', 82.22, 12, '2020'),
+(3152, 2, '11', 63.35, 9, '2020'),
+(3153, 2, '55', 59.72, 4, '2020'),
+(3154, 2, '48', 102.77, 11, '2020'),
+(3155, 2, '36', 68.43, 1, '2020'),
+(3156, 2, '2', 66.28, 2, '2020'),
+(3157, 2, '31', 82.63, 1, '2020'),
+(3158, 2, '5', 63.6, 2, '2020'),
+(3159, 2, '54', 93.41, 5, '2020'),
+(3160, 2, '52', 67.59, 9, '2020'),
+(3161, 2, '35', 102.72, 11, '2020'),
+(3162, 2, '34', 111.4, 1, '2020'),
+(3163, 2, '61', 89.25, 1, '2020'),
+(3164, 2, '60', 184.07, 1, '2020'),
+(3165, 2, '39', 114.09, 1, '2020'),
+(3166, 3, '4', 101.36, 6, '2020'),
+(3167, 3, '62', 82.29, 1, '2020'),
+(3168, 3, '57', 78.7, 1, '2020'),
+(3169, 3, '22', 85.96, 1, '2020'),
+(3170, 3, '76', 90.89, 1, '2020'),
+(3171, 3, '29', 175.71, 1, '2020'),
+(3172, 3, '31', 126.94, 1, '2020'),
+(3173, 3, '66', 95.6, 1, '2020'),
+(3174, 3, '15', 92.57, 3, '2020'),
+(3175, 3, '68', 37.31, 1, '2020'),
+(3176, 3, '59', 80.64, 1, '2020'),
+(3177, 4, '52', 92.62, 3, '2020'),
+(3178, 4, '29', 15.27, 7, '2020'),
+(3179, 4, '31', 102.82, 1, '2020'),
+(3180, 4, '15', 8.73, 11, '2020'),
+(3181, 4, '43', 94.81, 3, '2020'),
+(3182, 4, '66', 196.45, 1, '2020'),
+(3183, 4, '21', 81.37, 7, '2020'),
+(3184, 4, '14', 238.46, 1, '2020'),
+(3185, 4, '27', 87.26, 2, '2020'),
+(3186, 4, '5', 90.73, 1, '2020'),
+(3187, 4, '26', 108.35, 1, '2020'),
+(3188, 4, '71', 98.66, 1, '2020'),
+(3189, 4, '72', 98.47, 3, '2020'),
+(3190, 4, '19', 154.54, 1, '2020'),
+(3191, 4, '22', 22.4, 2, '2020'),
+(3192, 4, '58', 20.76, 2, '2020'),
+(3193, 4, '67', 32.61, 2, '2020'),
+(3194, 4, '49', 41.76, 1, '2020'),
+(3195, 6, '30', 73.36, 2, '2020'),
+(3196, 6, '2', 17, 1, '2020'),
+(3197, 6, '15', 45.84, 1, '2020'),
+(3198, 8, '3', 76.75, 1, '2020'),
+(3199, 1, '3', 131.89, 8, '2020'),
+(3200, 1, '23', 87.49, 3, '2020'),
+(3201, 1, '55', 241.84, 1, '2020'),
+(3202, 1, '21', 63.31, 20, '2020'),
+(3203, 1, '35', 96.25, 2, '2020'),
+(3204, 1, '49', 107.81, 1, '2020'),
+(3205, 1, '74', 84.88, 6, '2020'),
+(3206, 1, '30', 122.49, 1, '2020'),
+(3207, 1, '27', 74.27, 21, '2020'),
+(3208, 1, '10', 96.94, 1, '2020'),
+(3209, 1, '50', 124.5, 3, '2020'),
+(3210, 1, '62', 87.7, 1, '2020'),
+(3211, 1, '73', 97.63, 3, '2020'),
+(3212, 1, '58', 93.27, 1, '2020'),
+(3213, 1, '26', 99.98, 6, '2020'),
+(3214, 1, '15', 56.28, 3, '2020'),
+(3215, 1, '24', 135.15, 1, '2020'),
+(3216, 1, '4', 112.32, 12, '2020'),
+(3217, 1, '59', 51.93, 1, '2020'),
+(3218, 1, '68', 56.42, 4, '2020'),
+(3219, 1, '44', 101.9, 1, '2020'),
+(3220, 1, '29', 38.83, 12, '2020'),
+(3221, 1, '16', 82.91, 1, '2020'),
+(3222, 1, '1', 105.76, 1, '2020'),
+(3223, 1, '70', 88.85, 2, '2020'),
+(3224, 1, '2', 68.5, 1, '2020'),
+(3225, 1, '42', 136.56, 1, '2020'),
+(3226, 1, '77', 155.37, 1, '2020'),
+(3227, 1, '76', 80.76, 5, '2020'),
+(3228, 1, '67', 84.48, 1, '2020'),
+(3229, 1, '13', 199.3, 1, '2020'),
+(3230, 1, '45', 106.06, 1, '2020'),
+(3231, 1, '9', 161.19, 2, '2020'),
+(3232, 1, '48', 87.87, 3, '2020'),
+(3233, 1, '32', 86.9, 1, '2020'),
+(3234, 1, '19', 153.5, 1, '2020'),
+(3235, 1, '14', 60.23, 1, '2020'),
+(3236, 1, '36', 68.89, 1, '2020'),
+(3237, 1, '51', 116.14, 1, '2020'),
+(3238, 1, '63', 77.03, 1, '2020'),
+(3239, 1, '72', 48.24, 1, '2020'),
+(3240, 9, '58', 99.33, 1, '2020'),
+(3241, 9, '21', 79.32, 2, '2020'),
+(3242, 9, '15', 107.56, 1, '2020'),
+(3243, 9, '27', 76.3, 4, '2020'),
+(3244, 9, '9', 96.61, 1, '2020'),
+(3245, 9, '29', 77.43, 1, '2020');
 
 -- --------------------------------------------------------
 
@@ -29632,21 +29811,21 @@ CREATE TABLE `b_schools` (
   `points` tinyint(4) NOT NULL,
   `dide_id` int(11) NOT NULL,
   `area_id` int(11) NOT NULL,
-  `esperino` tinyint(4) NOT NULL DEFAULT '0',
-  `peiramatiko` tinyint(4) NOT NULL DEFAULT '0',
-  `mousiko` tinyint(4) NOT NULL DEFAULT '0',
-  `lykeiakes_ta3eis` tinyint(4) NOT NULL DEFAULT '0',
-  `gymnasiako_parartima` tinyint(4) NOT NULL DEFAULT '0',
-  `anaphrwn` tinyint(4) NOT NULL DEFAULT '0',
-  `pallinostountwn` tinyint(4) NOT NULL DEFAULT '0',
-  `kwfalalwn` tinyint(4) NOT NULL DEFAULT '0',
-  `eeeek` tinyint(4) NOT NULL DEFAULT '0',
-  `ekklhsiastiko` tinyint(4) NOT NULL DEFAULT '0',
-  `diapolitismiko` tinyint(4) NOT NULL DEFAULT '0',
-  `a8lhtiko` tinyint(4) NOT NULL DEFAULT '0',
-  `kallitexniko` tinyint(4) NOT NULL DEFAULT '0',
-  `to_delete` tinyint(4) NOT NULL DEFAULT '0',
-  `municipality_id` int(11) NOT NULL DEFAULT '-1'
+  `esperino` tinyint(4) NOT NULL DEFAULT 0,
+  `peiramatiko` tinyint(4) NOT NULL DEFAULT 0,
+  `mousiko` tinyint(4) NOT NULL DEFAULT 0,
+  `lykeiakes_ta3eis` tinyint(4) NOT NULL DEFAULT 0,
+  `gymnasiako_parartima` tinyint(4) NOT NULL DEFAULT 0,
+  `anaphrwn` tinyint(4) NOT NULL DEFAULT 0,
+  `pallinostountwn` tinyint(4) NOT NULL DEFAULT 0,
+  `kwfalalwn` tinyint(4) NOT NULL DEFAULT 0,
+  `eeeek` tinyint(4) NOT NULL DEFAULT 0,
+  `ekklhsiastiko` tinyint(4) NOT NULL DEFAULT 0,
+  `diapolitismiko` tinyint(4) NOT NULL DEFAULT 0,
+  `a8lhtiko` tinyint(4) NOT NULL DEFAULT 0,
+  `kallitexniko` tinyint(4) NOT NULL DEFAULT 0,
+  `to_delete` tinyint(4) NOT NULL DEFAULT 0,
+  `municipality_id` int(11) NOT NULL DEFAULT -1
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
@@ -33527,13 +33706,13 @@ INSERT INTO `kladoi` (`id`, `code`, `description`) VALUES
 --
 
 CREATE TABLE `municipalities` (
-  `id` int(5) NOT NULL DEFAULT '0',
+  `id` int(5) NOT NULL DEFAULT 0,
   `level_1` int(1) DEFAULT NULL,
   `level_2` int(3) DEFAULT NULL,
   `kallikratis_code` varchar(10) DEFAULT NULL,
   `description` varchar(127) DEFAULT NULL,
-  `a_area_id` int(11) NOT NULL DEFAULT '-1',
-  `b_area_id` int(11) NOT NULL DEFAULT '-1'
+  `a_area_id` int(11) NOT NULL DEFAULT -1,
+  `b_area_id` int(11) NOT NULL DEFAULT -1
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
@@ -54496,66 +54675,80 @@ ALTER TABLE `regions`
 --
 ALTER TABLE `a_areas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2081;
+
 --
 -- AUTO_INCREMENT for table `a_bases`
 --
 ALTER TABLE `a_bases`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3102;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3246;
+
 --
 -- AUTO_INCREMENT for table `a_schools`
 --
 ALTER TABLE `a_schools`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12404;
+
 --
 -- AUTO_INCREMENT for table `a_school_types`
 --
 ALTER TABLE `a_school_types`
   MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `a_specialties`
 --
 ALTER TABLE `a_specialties`
   MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1010;
+
 --
 -- AUTO_INCREMENT for table `b_areas`
 --
 ALTER TABLE `b_areas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2180;
+
 --
 -- AUTO_INCREMENT for table `b_bases`
 --
 ALTER TABLE `b_bases`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14575;
+
 --
 -- AUTO_INCREMENT for table `b_schools`
 --
 ALTER TABLE `b_schools`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3827;
+
 --
 -- AUTO_INCREMENT for table `b_school_types`
 --
 ALTER TABLE `b_school_types`
   MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `b_specialties`
 --
 ALTER TABLE `b_specialties`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1140;
+
 --
 -- AUTO_INCREMENT for table `kladoi`
 --
 ALTER TABLE `kladoi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
 --
 -- AUTO_INCREMENT for table `provinces`
 --
 ALTER TABLE `provinces`
   MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+
 --
 -- AUTO_INCREMENT for table `regions`
 --
 ALTER TABLE `regions`
   MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
