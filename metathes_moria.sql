@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 4.9.5deb2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Apr 25, 2020 at 01:30 PM
--- Server version: 10.3.22-MariaDB-0+deb10u1
--- PHP Version: 7.3.14-1~deb10u1
+-- Host: localhost:3306
+-- Generation Time: Mar 25, 2021 at 01:50 PM
+-- Server version: 8.0.23-0ubuntu0.20.04.1
+-- PHP Version: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `a_areas` (
-  `id` int(11) NOT NULL,
-  `dipe_id` int(11) NOT NULL,
+  `id` int NOT NULL,
+  `dipe_id` int NOT NULL,
   `description` varchar(40) NOT NULL,
   `ypepth_code` varchar(5) NOT NULL DEFAULT '00000',
   `full_name` varchar(40) NOT NULL DEFAULT 'null',
@@ -274,7 +274,7 @@ INSERT INTO `a_areas` (`id`, `dipe_id`, `description`, `ypepth_code`, `full_name
 
 CREATE TABLE `a_areas_match` (
   `description` varchar(100) NOT NULL,
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `year` varchar(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -475,7 +475,9 @@ INSERT INTO `a_areas_match` (`description`, `id`, `year`) VALUES
 ('Α΄ ΚΥΚΛΑΔΩΝ (Π.Ε.)', 60, '2020'),
 ('Β΄ ΚΥΚΛΑΔΩΝ (Π.Ε.)', 61, '2020'),
 ('Α΄ ΕΥΒΟΙΑΣ (Π.Ε.)', 37, '2020'),
-('Β΄ ΕΥΒΟΙΑΣ (Π.Ε.)', 38, '2020');
+('Β΄ ΕΥΒΟΙΑΣ (Π.Ε.)', 38, '2020'),
+('Α΄ ΣΑΜΟΥ (Π.Ε.)', 18, '2021'),
+('Γ΄ ΠΕΙΡΑΙΑ (Π.Ε.)', 17, '2021');
 
 -- --------------------------------------------------------
 
@@ -484,11 +486,11 @@ INSERT INTO `a_areas_match` (`description`, `id`, `year`) VALUES
 --
 
 CREATE TABLE `a_bases` (
-  `id` int(11) NOT NULL,
-  `specialty_id` int(11) NOT NULL,
+  `id` int NOT NULL,
+  `specialty_id` int NOT NULL,
   `area_code` varchar(4) NOT NULL,
   `points` float NOT NULL,
-  `how_many_in` int(11) NOT NULL,
+  `how_many_in` int NOT NULL,
   `year` varchar(4) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -3284,7 +3286,182 @@ INSERT INTO `a_bases` (`id`, `specialty_id`, `area_code`, `points`, `how_many_in
 (3242, 9, '15', 107.56, 1, '2020'),
 (3243, 9, '27', 76.3, 4, '2020'),
 (3244, 9, '9', 96.61, 1, '2020'),
-(3245, 9, '29', 77.43, 1, '2020');
+(3245, 9, '29', 77.43, 1, '2020'),
+(3246, 3, '27', 92.07, 16, '2021'),
+(3247, 3, '30', 68.52, 10, '2021'),
+(3248, 3, '4', 91.56, 19, '2021'),
+(3249, 3, '3', 128.65, 11, '2021'),
+(3250, 3, '21', 67.46, 24, '2021'),
+(3251, 3, '29', 36.77, 14, '2021'),
+(3252, 3, '13', 100.36, 3, '2021'),
+(3253, 3, '36', 68.22, 1, '2021'),
+(3254, 3, '73', 43.15, 3, '2021'),
+(3255, 3, '57', 81.84, 2, '2021'),
+(3256, 3, '68', 89.59, 1, '2021'),
+(3257, 3, '44', 71.56, 2, '2021'),
+(3258, 3, '76', 117.16, 1, '2021'),
+(3259, 3, '26', 113.65, 1, '2021'),
+(3260, 3, '35', 102.44, 1, '2021'),
+(3261, 3, '37', 78.2, 1, '2021'),
+(3262, 3, '42', 115.52, 1, '2021'),
+(3263, 3, '67', 59.67, 1, '2021'),
+(3264, 3, '11', 58.14, 2, '2021'),
+(3265, 2, '50', 103.9, 55, '2021'),
+(3266, 2, '3', 110.85, 248, '2021'),
+(3267, 2, '74', 68.14, 17, '2021'),
+(3268, 2, '4', 84.93, 252, '2021'),
+(3269, 2, '67', 53.66, 4, '2021'),
+(3270, 2, '13', 68.39, 32, '2021'),
+(3271, 2, '55', 103.82, 3, '2021'),
+(3272, 2, '46', 60.34, 4, '2021'),
+(3273, 2, '22', 61.76, 3, '2021'),
+(3274, 2, '1', 72.96, 12, '2021'),
+(3275, 2, '35', 71.15, 20, '2021'),
+(3276, 2, '21', 64.56, 16, '2021'),
+(3277, 2, '70', 78.02, 11, '2021'),
+(3278, 2, '76', 55.76, 15, '2021'),
+(3279, 2, '75', 105.08, 87, '2021'),
+(3280, 2, '49', 69.79, 5, '2021'),
+(3281, 2, '16', 132.56, 1, '2021'),
+(3282, 2, '69', 63.27, 67, '2021'),
+(3283, 2, '27', 53.74, 31, '2021'),
+(3284, 2, '73', 66.35, 31, '2021'),
+(3285, 2, '66', 88.6, 3, '2021'),
+(3286, 2, '59', 57.32, 31, '2021'),
+(3287, 2, '15', 68.08, 5, '2021'),
+(3288, 2, '26', 66.58, 21, '2021'),
+(3289, 2, '63', 89.22, 7, '2021'),
+(3290, 2, '30', 53.82, 24, '2021'),
+(3291, 2, '36', 71.32, 4, '2021'),
+(3292, 2, '24', 93.32, 2, '2021'),
+(3293, 2, '2', 50.82, 3, '2021'),
+(3294, 2, '19', 199.6, 1, '2021'),
+(3295, 2, '9', 93.2, 151, '2021'),
+(3296, 2, '62', 75.73, 2, '2021'),
+(3297, 2, '43', 86.52, 2, '2021'),
+(3298, 2, '60', 119.32, 1, '2021'),
+(3299, 2, '53', 78.98, 58, '2021'),
+(3300, 2, '44', 73.97, 8, '2021'),
+(3301, 2, '48', 61.81, 43, '2021'),
+(3302, 2, '71', 83.07, 3, '2021'),
+(3303, 2, '47', 104.85, 3, '2021'),
+(3304, 2, '65', 113.24, 1, '2021'),
+(3305, 2, '29', 54.83, 9, '2021'),
+(3306, 2, '51', 71.38, 12, '2021'),
+(3307, 2, '25', 68.86, 4, '2021'),
+(3308, 2, '45', 68.82, 8, '2021'),
+(3309, 2, '18', 56.83, 3, '2021'),
+(3310, 2, '57', 62.64, 29, '2021'),
+(3311, 2, '23', 82.53, 1, '2021'),
+(3312, 2, '28', 82.26, 2, '2021'),
+(3313, 2, '72', 65.82, 9, '2021'),
+(3314, 2, '54', 73.99, 16, '2021'),
+(3315, 2, '68', 61.88, 27, '2021'),
+(3316, 2, '40', 87.67, 2, '2021'),
+(3317, 2, '64', 77.68, 3, '2021'),
+(3318, 2, '58', 84.84, 2, '2021'),
+(3319, 2, '31', 127.17, 2, '2021'),
+(3320, 2, '77', 86.03, 4, '2021'),
+(3321, 2, '39', 144.4, 1, '2021'),
+(3322, 2, '61', 160.81, 1, '2021'),
+(3323, 2, '37', 72.62, 4, '2021'),
+(3324, 2, '14', 72.99, 3, '2021'),
+(3325, 2, '10', 83.52, 1, '2021'),
+(3326, 2, '11', 72.7, 1, '2021'),
+(3327, 7, '3', 143.43, 4, '2021'),
+(3328, 7, '4', 121.45, 4, '2021'),
+(3329, 7, '21', 116.86, 2, '2021'),
+(3330, 7, '13', 83.11, 3, '2021'),
+(3331, 7, '30', 105.82, 3, '2021'),
+(3332, 7, '15', 63.39, 5, '2021'),
+(3333, 7, '69', 110.62, 2, '2021'),
+(3334, 7, '48', 61.84, 5, '2021'),
+(3335, 7, '50', 88.11, 3, '2021'),
+(3336, 7, '67', 98.39, 1, '2021'),
+(3337, 7, '29', 49.91, 7, '2021'),
+(3338, 7, '1', 76.34, 1, '2021'),
+(3339, 7, '5', 132.3, 1, '2021'),
+(3340, 7, '36', 37.58, 3, '2021'),
+(3341, 7, '37', 92.49, 1, '2021'),
+(3342, 7, '25', 55.63, 1, '2021'),
+(3343, 7, '31', 62.69, 1, '2021'),
+(3344, 7, '35', 101.44, 1, '2021'),
+(3345, 7, '68', 33.21, 2, '2021'),
+(3346, 5, '57', 92.99, 1, '2021'),
+(3347, 5, '3', 121.95, 1, '2021'),
+(3348, 5, '4', 93.21, 1, '2021'),
+(3349, 5, '1', 85.35, 1, '2021'),
+(3350, 6, '27', 99.23, 1, '2021'),
+(3351, 6, '58', 78.81, 1, '2021'),
+(3352, 6, '68', 113.13, 1, '2021'),
+(3353, 6, '21', 82.91, 1, '2021'),
+(3354, 6, '15', 35.16, 2, '2021'),
+(3355, 6, '29', 52.83, 1, '2021'),
+(3356, 4, '4', 203.31, 2, '2021'),
+(3357, 4, '27', 76.11, 8, '2021'),
+(3358, 4, '76', 148.88, 1, '2021'),
+(3359, 4, '21', 19.03, 10, '2021'),
+(3360, 4, '77', 87.16, 3, '2021'),
+(3361, 4, '29', 59.79, 2, '2021'),
+(3362, 4, '61', 98.05, 1, '2021'),
+(3363, 4, '47', 111.61, 1, '2021'),
+(3364, 4, '72', 102.19, 2, '2021'),
+(3365, 4, '17', 146.17, 1, '2021'),
+(3366, 4, '15', 100.29, 2, '2021'),
+(3367, 4, '26', 85.48, 1, '2021'),
+(3368, 4, '43', 34.55, 2, '2021'),
+(3369, 4, '49', 98.21, 1, '2021'),
+(3370, 4, '67', 30.28, 1, '2021'),
+(3371, 1, '3', 118.65, 51, '2021'),
+(3372, 1, '27', 50.02, 41, '2021'),
+(3373, 1, '64', 292.48, 1, '2021'),
+(3374, 1, '18', 138.88, 1, '2021'),
+(3375, 1, '21', 54.69, 22, '2021'),
+(3376, 1, '65', 97.27, 2, '2021'),
+(3377, 1, '9', 118.67, 54, '2021'),
+(3378, 1, '49', 101.16, 1, '2021'),
+(3379, 1, '13', 73.48, 18, '2021'),
+(3380, 1, '75', 62.7, 20, '2021'),
+(3381, 1, '4', 105.92, 64, '2021'),
+(3382, 1, '47', 57.84, 2, '2021'),
+(3383, 1, '51', 95.05, 3, '2021'),
+(3384, 1, '69', 86.61, 21, '2021'),
+(3385, 1, '55', 98.14, 2, '2021'),
+(3386, 1, '50', 123.01, 9, '2021'),
+(3387, 1, '35', 84.83, 3, '2021'),
+(3388, 1, '25', 87.02, 2, '2021'),
+(3389, 1, '1', 74.46, 2, '2021'),
+(3390, 1, '59', 104.99, 1, '2021'),
+(3391, 1, '19', 206.4, 1, '2021'),
+(3392, 1, '74', 74.51, 9, '2021'),
+(3393, 1, '70', 81.77, 3, '2021'),
+(3394, 1, '53', 68.31, 12, '2021'),
+(3395, 1, '22', 104.81, 1, '2021'),
+(3396, 1, '26', 90.29, 28, '2021'),
+(3397, 1, '57', 67.1, 14, '2021'),
+(3398, 1, '77', 94.04, 1, '2021'),
+(3399, 1, '54', 77.22, 3, '2021'),
+(3400, 1, '46', 76.56, 1, '2021'),
+(3401, 1, '30', 72.44, 21, '2021'),
+(3402, 1, '29', 69.73, 2, '2021'),
+(3403, 1, '16', 71.28, 1, '2021'),
+(3404, 1, '66', 68.6, 2, '2021'),
+(3405, 1, '37', 77.75, 1, '2021'),
+(3406, 1, '76', 74.24, 3, '2021'),
+(3407, 1, '48', 76.98, 5, '2021'),
+(3408, 1, '15', 64.46, 2, '2021'),
+(3409, 1, '2', 69.06, 2, '2021'),
+(3410, 1, '73', 79.34, 3, '2021'),
+(3411, 1, '17', 102.26, 1, '2021'),
+(3412, 1, '78', 87.3, 1, '2021'),
+(3413, 1, '44', 65.92, 1, '2021'),
+(3414, 9, '21', 87.74, 2, '2021'),
+(3415, 9, '27', 114.7, 1, '2021'),
+(3416, 9, '29', 66.81, 1, '2021'),
+(3417, 9, '63', 52.24, 1, '2021'),
+(3418, 9, '9', 91.47, 1, '2021'),
+(3419, 9, '30', 75.21, 1, '2021'),
+(3420, 8, '3', 77.58, 1, '2021');
 
 -- --------------------------------------------------------
 
@@ -3293,16 +3470,16 @@ INSERT INTO `a_bases` (`id`, `specialty_id`, `area_code`, `points`, `how_many_in
 --
 
 CREATE TABLE `a_schools` (
-  `id` int(11) NOT NULL,
-  `type` int(11) NOT NULL,
-  `points` int(11) NOT NULL,
-  `area_id` int(11) NOT NULL,
-  `dipe_id` int(11) NOT NULL,
+  `id` int NOT NULL,
+  `type` int NOT NULL,
+  `points` int NOT NULL,
+  `area_id` int NOT NULL,
+  `dipe_id` int NOT NULL,
   `description` varchar(50) NOT NULL,
-  `oloimero` int(11) NOT NULL,
-  `eidiko` int(11) NOT NULL,
+  `oloimero` int NOT NULL,
+  `eidiko` int NOT NULL,
   `number` varchar(5) NOT NULL,
-  `new_program` int(11) NOT NULL
+  `new_program` int NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 --
@@ -15479,7 +15656,7 @@ INSERT INTO `a_schools` (`id`, `type`, `points`, `area_id`, `dipe_id`, `descript
 --
 
 CREATE TABLE `a_school_types` (
-  `id` tinyint(4) NOT NULL,
+  `id` tinyint NOT NULL,
   `description` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -15498,8 +15675,8 @@ INSERT INTO `a_school_types` (`id`, `description`) VALUES
 --
 
 CREATE TABLE `a_specialties` (
-  `id` int(4) NOT NULL,
-  `klados_id` int(11) NOT NULL,
+  `id` int NOT NULL,
+  `klados_id` int NOT NULL,
   `code` varchar(10) NOT NULL,
   `description` varchar(50) NOT NULL,
   `clean_url` varchar(20) NOT NULL
@@ -15539,7 +15716,7 @@ INSERT INTO `a_specialties` (`id`, `klados_id`, `code`, `description`, `clean_ur
 
 CREATE TABLE `a_specialties_match` (
   `description` varchar(100) DEFAULT NULL,
-  `id` int(11) DEFAULT NULL,
+  `id` int DEFAULT NULL,
   `year` varchar(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -15566,8 +15743,8 @@ INSERT INTO `a_specialties_match` (`description`, `id`, `year`) VALUES
 --
 
 CREATE TABLE `b_areas` (
-  `id` int(11) NOT NULL,
-  `dide_id` int(11) NOT NULL,
+  `id` int NOT NULL,
+  `dide_id` int NOT NULL,
   `description` varchar(40) NOT NULL,
   `ypepth_code` varchar(5) NOT NULL DEFAULT '0000',
   `full_name` varchar(40) NOT NULL DEFAULT 'null',
@@ -15917,7 +16094,7 @@ INSERT INTO `b_areas` (`id`, `dide_id`, `description`, `ypepth_code`, `full_name
 
 CREATE TABLE `b_areas_match` (
   `description` varchar(100) DEFAULT NULL,
-  `id` int(11) DEFAULT NULL,
+  `id` int DEFAULT NULL,
   `year` varchar(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -16031,11 +16208,11 @@ INSERT INTO `b_areas_match` (`description`, `id`, `year`) VALUES
 --
 
 CREATE TABLE `b_bases` (
-  `id` int(11) NOT NULL,
-  `specialty_id` int(11) NOT NULL,
+  `id` int NOT NULL,
+  `specialty_id` int NOT NULL,
   `area_code` varchar(10) NOT NULL,
   `points` float NOT NULL,
-  `how_many_in` int(11) NOT NULL,
+  `how_many_in` int NOT NULL,
   `year` varchar(4) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -30055,28 +30232,28 @@ INSERT INTO `b_bases` (`id`, `specialty_id`, `area_code`, `points`, `how_many_in
 --
 
 CREATE TABLE `b_schools` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `number` varchar(5) NOT NULL,
-  `type` tinyint(4) NOT NULL,
+  `type` tinyint NOT NULL,
   `municipality` varchar(40) NOT NULL,
-  `points` tinyint(4) NOT NULL,
-  `dide_id` int(11) NOT NULL,
-  `area_id` int(11) NOT NULL,
-  `esperino` tinyint(4) NOT NULL DEFAULT 0,
-  `peiramatiko` tinyint(4) NOT NULL DEFAULT 0,
-  `mousiko` tinyint(4) NOT NULL DEFAULT 0,
-  `lykeiakes_ta3eis` tinyint(4) NOT NULL DEFAULT 0,
-  `gymnasiako_parartima` tinyint(4) NOT NULL DEFAULT 0,
-  `anaphrwn` tinyint(4) NOT NULL DEFAULT 0,
-  `pallinostountwn` tinyint(4) NOT NULL DEFAULT 0,
-  `kwfalalwn` tinyint(4) NOT NULL DEFAULT 0,
-  `eeeek` tinyint(4) NOT NULL DEFAULT 0,
-  `ekklhsiastiko` tinyint(4) NOT NULL DEFAULT 0,
-  `diapolitismiko` tinyint(4) NOT NULL DEFAULT 0,
-  `a8lhtiko` tinyint(4) NOT NULL DEFAULT 0,
-  `kallitexniko` tinyint(4) NOT NULL DEFAULT 0,
-  `to_delete` tinyint(4) NOT NULL DEFAULT 0,
-  `municipality_id` int(11) NOT NULL DEFAULT -1
+  `points` tinyint NOT NULL,
+  `dide_id` int NOT NULL,
+  `area_id` int NOT NULL,
+  `esperino` tinyint NOT NULL DEFAULT '0',
+  `peiramatiko` tinyint NOT NULL DEFAULT '0',
+  `mousiko` tinyint NOT NULL DEFAULT '0',
+  `lykeiakes_ta3eis` tinyint NOT NULL DEFAULT '0',
+  `gymnasiako_parartima` tinyint NOT NULL DEFAULT '0',
+  `anaphrwn` tinyint NOT NULL DEFAULT '0',
+  `pallinostountwn` tinyint NOT NULL DEFAULT '0',
+  `kwfalalwn` tinyint NOT NULL DEFAULT '0',
+  `eeeek` tinyint NOT NULL DEFAULT '0',
+  `ekklhsiastiko` tinyint NOT NULL DEFAULT '0',
+  `diapolitismiko` tinyint NOT NULL DEFAULT '0',
+  `a8lhtiko` tinyint NOT NULL DEFAULT '0',
+  `kallitexniko` tinyint NOT NULL DEFAULT '0',
+  `to_delete` tinyint NOT NULL DEFAULT '0',
+  `municipality_id` int NOT NULL DEFAULT '-1'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
@@ -33597,7 +33774,7 @@ INSERT INTO `b_schools` (`id`, `number`, `type`, `municipality`, `points`, `dide
 --
 
 CREATE TABLE `b_school_types` (
-  `id` tinyint(4) NOT NULL,
+  `id` tinyint NOT NULL,
   `description` varchar(40) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -33618,8 +33795,8 @@ INSERT INTO `b_school_types` (`id`, `description`) VALUES
 --
 
 CREATE TABLE `b_specialties` (
-  `id` int(11) NOT NULL,
-  `klados_id` int(11) NOT NULL,
+  `id` int NOT NULL,
+  `klados_id` int NOT NULL,
   `code` varchar(10) NOT NULL,
   `description` varchar(160) NOT NULL,
   `ypepth_code` varchar(3) NOT NULL DEFAULT '000',
@@ -33856,7 +34033,7 @@ INSERT INTO `b_specialties` (`id`, `klados_id`, `code`, `description`, `ypepth_c
 
 CREATE TABLE `b_specialties_match` (
   `description` varchar(100) DEFAULT NULL,
-  `id` int(11) DEFAULT NULL,
+  `id` int DEFAULT NULL,
   `year` varchar(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -33907,7 +34084,7 @@ INSERT INTO `b_specialties_match` (`description`, `id`, `year`) VALUES
 --
 
 CREATE TABLE `kladoi` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `code` varchar(4) NOT NULL,
   `description` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -33961,13 +34138,13 @@ INSERT INTO `kladoi` (`id`, `code`, `description`) VALUES
 --
 
 CREATE TABLE `municipalities` (
-  `id` int(5) NOT NULL DEFAULT 0,
-  `level_1` int(1) DEFAULT NULL,
-  `level_2` int(3) DEFAULT NULL,
+  `id` int NOT NULL DEFAULT '0',
+  `level_1` int DEFAULT NULL,
+  `level_2` int DEFAULT NULL,
   `kallikratis_code` varchar(10) DEFAULT NULL,
   `description` varchar(127) DEFAULT NULL,
-  `a_area_id` int(11) NOT NULL DEFAULT -1,
-  `b_area_id` int(11) NOT NULL DEFAULT -1
+  `a_area_id` int NOT NULL DEFAULT '-1',
+  `b_area_id` int NOT NULL DEFAULT '-1'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
@@ -54720,11 +54897,11 @@ INSERT INTO `municipalities` (`id`, `level_1`, `level_2`, `kallikratis_code`, `d
 --
 
 CREATE TABLE `provinces` (
-  `id` tinyint(4) NOT NULL,
+  `id` tinyint NOT NULL,
   `description` varchar(50) NOT NULL,
   `B_url` varchar(100) NOT NULL,
   `A_url` varchar(100) NOT NULL,
-  `pde_id` tinyint(4) NOT NULL,
+  `pde_id` tinyint NOT NULL,
   `map_link` text NOT NULL,
   `B_telephone` varchar(10) NOT NULL,
   `B_fax` varchar(10) NOT NULL,
@@ -54804,7 +54981,7 @@ INSERT INTO `provinces` (`id`, `description`, `B_url`, `A_url`, `pde_id`, `map_l
 --
 
 CREATE TABLE `regions` (
-  `id` tinyint(4) NOT NULL,
+  `id` tinyint NOT NULL,
   `description` varchar(200) NOT NULL,
   `url` varchar(200) NOT NULL,
   `telephone` varchar(10) NOT NULL,
@@ -54929,79 +55106,79 @@ ALTER TABLE `regions`
 -- AUTO_INCREMENT for table `a_areas`
 --
 ALTER TABLE `a_areas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2081;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2081;
 
 --
 -- AUTO_INCREMENT for table `a_bases`
 --
 ALTER TABLE `a_bases`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3246;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3421;
 
 --
 -- AUTO_INCREMENT for table `a_schools`
 --
 ALTER TABLE `a_schools`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12404;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12404;
 
 --
 -- AUTO_INCREMENT for table `a_school_types`
 --
 ALTER TABLE `a_school_types`
-  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` tinyint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `a_specialties`
 --
 ALTER TABLE `a_specialties`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1010;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1010;
 
 --
 -- AUTO_INCREMENT for table `b_areas`
 --
 ALTER TABLE `b_areas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2180;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2180;
 
 --
 -- AUTO_INCREMENT for table `b_bases`
 --
 ALTER TABLE `b_bases`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14785;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14785;
 
 --
 -- AUTO_INCREMENT for table `b_schools`
 --
 ALTER TABLE `b_schools`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3827;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3827;
 
 --
 -- AUTO_INCREMENT for table `b_school_types`
 --
 ALTER TABLE `b_school_types`
-  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` tinyint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `b_specialties`
 --
 ALTER TABLE `b_specialties`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1140;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1140;
 
 --
 -- AUTO_INCREMENT for table `kladoi`
 --
 ALTER TABLE `kladoi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `provinces`
 --
 ALTER TABLE `provinces`
-  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id` tinyint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `regions`
 --
 ALTER TABLE `regions`
-  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` tinyint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
