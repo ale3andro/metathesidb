@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 27, 2021 at 04:36 PM
--- Server version: 8.0.23-0ubuntu0.20.04.1
+-- Generation Time: Mar 19, 2022 at 05:16 PM
+-- Server version: 8.0.28-0ubuntu0.20.04.3
 -- PHP Version: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -35,7 +35,7 @@ CREATE TABLE `a_areas` (
   `ypepth_code` varchar(5) NOT NULL DEFAULT '00000',
   `full_name` varchar(40) NOT NULL DEFAULT 'null',
   `clean_url` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `a_areas`
@@ -276,7 +276,7 @@ CREATE TABLE `a_areas_match` (
   `description` varchar(100) NOT NULL,
   `id` int NOT NULL,
   `year` varchar(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `a_areas_match`
@@ -477,7 +477,8 @@ INSERT INTO `a_areas_match` (`description`, `id`, `year`) VALUES
 ('Α΄ ΕΥΒΟΙΑΣ (Π.Ε.)', 37, '2020'),
 ('Β΄ ΕΥΒΟΙΑΣ (Π.Ε.)', 38, '2020'),
 ('Α΄ ΣΑΜΟΥ (Π.Ε.)', 18, '2021'),
-('Γ΄ ΠΕΙΡΑΙΑ (Π.Ε.)', 17, '2021');
+('Γ΄ ΠΕΙΡΑΙΑ (Π.Ε.)', 17, '2021'),
+('Β΄ ΚΕΦΑΛΛΗΝΙΑΣ (Π.Ε.)', 8, '2022');
 
 -- --------------------------------------------------------
 
@@ -492,7 +493,7 @@ CREATE TABLE `a_bases` (
   `points` float NOT NULL,
   `how_many_in` int NOT NULL,
   `year` varchar(4) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `a_bases`
@@ -3463,7 +3464,180 @@ INSERT INTO `a_bases` (`id`, `specialty_id`, `area_code`, `points`, `how_many_in
 (3422, 3, '30', 68.52, 10, '2021'),
 (3421, 3, '27', 92.07, 16, '2021'),
 (3596, 9, '30', 75.21, 1, '2021'),
-(3597, 8, '3', 77.58, 1, '2021');
+(3597, 8, '3', 77.58, 1, '2021'),
+(3598, 8, '21', 117.5, 1, '2022'),
+(3599, 8, '15', 98.37, 1, '2022'),
+(3600, 8, '9', 91.16, 1, '2022'),
+(3601, 8, '73', 96.77, 1, '2022'),
+(3602, 3, '4', 102.99, 8, '2022'),
+(3603, 3, '21', 37.61, 14, '2022'),
+(3604, 3, '30', 52.02, 5, '2022'),
+(3605, 3, '29', 63, 5, '2022'),
+(3606, 3, '62', 88.62, 1, '2022'),
+(3607, 3, '15', 93.3, 1, '2022'),
+(3608, 3, '76', 82.19, 1, '2022'),
+(3609, 3, '3', 134.45, 6, '2022'),
+(3610, 3, '16', 74.86, 2, '2022'),
+(3611, 3, '67', 97.85, 1, '2022'),
+(3612, 3, '24', 115.1, 1, '2022'),
+(3613, 3, '23', 102.5, 1, '2022'),
+(3614, 3, '35', 106.61, 1, '2022'),
+(3615, 3, '18', 194.89, 1, '2022'),
+(3616, 3, '26', 76.51, 1, '2022'),
+(3617, 3, '68', 70.51, 1, '2022'),
+(3618, 3, '10', 142.14, 1, '2022'),
+(3619, 3, '59', 88.34, 1, '2022'),
+(3620, 3, '14', 49.42, 1, '2022'),
+(3621, 5, '4', 94.68, 2, '2022'),
+(3622, 5, '3', 120.44, 1, '2022'),
+(3623, 5, '57', 82.35, 2, '2022'),
+(3624, 5, '27', 46.43, 3, '2022'),
+(3625, 5, '1', 64.84, 1, '2022'),
+(3626, 5, '73', 106.88, 1, '2022'),
+(3627, 5, '46', 50.46, 1, '2022'),
+(3628, 5, '21', 37.53, 1, '2022'),
+(3629, 5, '76', 71.04, 1, '2022'),
+(3630, 5, '30', 28.45, 1, '2022'),
+(3631, 5, '53', 42.5, 1, '2022'),
+(3632, 6, '26', 95.6, 2, '2022'),
+(3633, 6, '71', 94.15, 1, '2022'),
+(3634, 6, '22', 132.74, 1, '2022'),
+(3635, 6, '27', 47.99, 3, '2022'),
+(3636, 6, '46', 98.29, 1, '2022'),
+(3637, 6, '1', 136.36, 1, '2022'),
+(3638, 6, '21', 88.31, 1, '2022'),
+(3639, 6, '29', 35.16, 2, '2022'),
+(3640, 7, '21', 84.69, 3, '2022'),
+(3641, 7, '13', 165.47, 2, '2022'),
+(3642, 7, '27', 87.18, 5, '2022'),
+(3643, 7, '4', 112.49, 2, '2022'),
+(3644, 7, '29', 45.15, 4, '2022'),
+(3645, 7, '15', 11.32, 5, '2022'),
+(3646, 7, '1', 52.29, 2, '2022'),
+(3647, 7, '68', 32.87, 2, '2022'),
+(3648, 7, '2', 34.13, 1, '2022'),
+(3649, 7, '50', 36.88, 1, '2022'),
+(3650, 7, '48', 58.8, 1, '2022'),
+(3651, 7, '47', 36.81, 1, '2022'),
+(3652, 7, '9', 33.92, 1, '2022'),
+(3653, 2, '50', 112.48, 20, '2022'),
+(3654, 2, '67', 70.6, 5, '2022'),
+(3655, 2, '51', 99.81, 4, '2022'),
+(3656, 2, '4', 50.63, 105, '2022'),
+(3657, 2, '30', 56.64, 21, '2022'),
+(3658, 2, '40', 112.75, 9, '2022'),
+(3659, 2, '44', 71.82, 10, '2022'),
+(3660, 2, '23', 70.82, 9, '2022'),
+(3661, 2, '26', 60.84, 13, '2022'),
+(3662, 2, '3', 128.06, 32, '2022'),
+(3663, 2, '2', 75.72, 7, '2022'),
+(3664, 2, '46', 82.97, 4, '2022'),
+(3665, 2, '70', 75.57, 10, '2022'),
+(3666, 2, '18', 152.38, 1, '2022'),
+(3667, 2, '21', 57.89, 22, '2022'),
+(3668, 2, '69', 70.01, 26, '2022'),
+(3669, 2, '9', 88.89, 60, '2022'),
+(3670, 2, '58', 82.54, 6, '2022'),
+(3671, 2, '37', 71.61, 9, '2022'),
+(3672, 2, '55', 74.83, 4, '2022'),
+(3673, 2, '13', 71.32, 24, '2022'),
+(3674, 2, '24', 142.17, 2, '2022'),
+(3675, 2, '17', 139.05, 1, '2022'),
+(3676, 2, '49', 73.73, 7, '2022'),
+(3677, 2, '64', 83.9, 3, '2022'),
+(3678, 2, '1', 64.34, 15, '2022'),
+(3679, 2, '27', 61.02, 25, '2022'),
+(3680, 2, '76', 64.43, 6, '2022'),
+(3681, 2, '29', 72.31, 11, '2022'),
+(3682, 2, '59', 72.02, 12, '2022'),
+(3683, 2, '19', 104.11, 1, '2022'),
+(3684, 2, '42', 166.35, 12, '2022'),
+(3685, 2, '57', 79.51, 6, '2022'),
+(3686, 2, '15', 74.89, 5, '2022'),
+(3687, 2, '75', 136.95, 6, '2022'),
+(3688, 2, '77', 105.43, 4, '2022'),
+(3689, 2, '31', 107.3, 3, '2022'),
+(3690, 2, '22', 72.92, 3, '2022'),
+(3691, 2, '53', 128.25, 7, '2022'),
+(3692, 2, '62', 87.64, 3, '2022'),
+(3693, 2, '74', 86.45, 7, '2022'),
+(3694, 2, '48', 84.3, 13, '2022'),
+(3695, 2, '45', 62.15, 6, '2022'),
+(3696, 2, '28', 212.89, 1, '2022'),
+(3697, 2, '71', 107.75, 2, '2022'),
+(3698, 2, '36', 106.78, 1, '2022'),
+(3699, 2, '65', 104.05, 1, '2022'),
+(3700, 2, '72', 78.07, 2, '2022'),
+(3701, 2, '73', 84.47, 5, '2022'),
+(3702, 2, '7', 119.81, 1, '2022'),
+(3703, 2, '68', 73.19, 13, '2022'),
+(3704, 2, '25', 62.85, 4, '2022'),
+(3705, 2, '63', 80.85, 1, '2022'),
+(3706, 2, '47', 93.76, 2, '2022'),
+(3707, 2, '35', 93.67, 3, '2022'),
+(3708, 2, '60', 107.78, 1, '2022'),
+(3709, 2, '38', 115.29, 1, '2022'),
+(3710, 2, '61', 109.47, 1, '2022'),
+(3711, 4, '21', 34.04, 6, '2022'),
+(3712, 4, '76', 108.64, 3, '2022'),
+(3713, 4, '27', 70.58, 3, '2022'),
+(3714, 4, '52', 92.46, 1, '2022'),
+(3715, 4, '7', 141.63, 1, '2022'),
+(3716, 4, '75', 179.51, 1, '2022'),
+(3717, 4, '67', 181.82, 1, '2022'),
+(3718, 4, '11', 186.36, 1, '2022'),
+(3719, 4, '8', 147.02, 1, '2022'),
+(3720, 4, '4', 157.13, 2, '2022'),
+(3721, 4, '72', 127.95, 1, '2022'),
+(3722, 4, '60', 100.27, 1, '2022'),
+(3723, 4, '32', 131.83, 1, '2022'),
+(3724, 4, '64', 89.18, 1, '2022'),
+(3725, 4, '38', 77.89, 1, '2022'),
+(3726, 1, '30', 70.59, 18, '2022'),
+(3727, 1, '3', 118.72, 41, '2022'),
+(3728, 1, '37', 90.47, 3, '2022'),
+(3729, 1, '57', 93.41, 3, '2022'),
+(3730, 1, '1', 77.99, 2, '2022'),
+(3731, 1, '4', 102.61, 53, '2022'),
+(3732, 1, '9', 124.39, 6, '2022'),
+(3733, 1, '23', 128.01, 1, '2022'),
+(3734, 1, '53', 85.24, 7, '2022'),
+(3735, 1, '75', 72.08, 5, '2022'),
+(3736, 1, '22', 114.64, 1, '2022'),
+(3737, 1, '27', 58.96, 11, '2022'),
+(3738, 1, '2', 81.57, 1, '2022'),
+(3739, 1, '26', 94.33, 9, '2022'),
+(3740, 1, '77', 112.22, 1, '2022'),
+(3741, 1, '29', 63.63, 5, '2022'),
+(3742, 1, '25', 88.5, 1, '2022'),
+(3743, 1, '21', 65.16, 6, '2022'),
+(3744, 1, '78', 94.14, 1, '2022'),
+(3745, 1, '76', 69.22, 5, '2022'),
+(3746, 1, '13', 73.94, 5, '2022'),
+(3747, 1, '46', 97.48, 2, '2022'),
+(3748, 1, '48', 92.09, 2, '2022'),
+(3749, 1, '58', 84.13, 2, '2022'),
+(3750, 1, '16', 77.99, 1, '2022'),
+(3751, 1, '35', 101.05, 1, '2022'),
+(3752, 1, '71', 96.26, 1, '2022'),
+(3753, 1, '73', 83.85, 4, '2022'),
+(3754, 1, '67', 69.72, 2, '2022'),
+(3755, 1, '70', 94.87, 2, '2022'),
+(3756, 1, '44', 80.53, 2, '2022'),
+(3757, 1, '40', 109.1, 3, '2022'),
+(3758, 1, '38', 108.61, 1, '2022'),
+(3759, 1, '49', 65.29, 1, '2022'),
+(3760, 1, '59', 114.88, 1, '2022'),
+(3761, 1, '61', 135.94, 1, '2022'),
+(3762, 1, '51', 96.39, 1, '2022'),
+(3763, 1, '74', 106.81, 1, '2022'),
+(3764, 1, '15', 72.55, 2, '2022'),
+(3765, 1, '47', 71.93, 1, '2022'),
+(3766, 9, '16', 99.66, 1, '2022'),
+(3767, 9, '43', 111.49, 1, '2022'),
+(3768, 9, '30', 56.16, 2, '2022'),
+(3769, 9, '26', 147.06, 1, '2022'),
+(3770, 9, '27', 88.4, 1, '2022');
 
 -- --------------------------------------------------------
 
@@ -3482,7 +3656,7 @@ CREATE TABLE `a_schools` (
   `eidiko` int NOT NULL,
   `number` varchar(5) NOT NULL,
   `new_program` int NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 ROW_FORMAT=DYNAMIC;
 
 --
 -- Dumping data for table `a_schools`
@@ -15660,7 +15834,7 @@ INSERT INTO `a_schools` (`id`, `type`, `points`, `area_id`, `dipe_id`, `descript
 CREATE TABLE `a_school_types` (
   `id` tinyint NOT NULL,
   `description` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `a_school_types`
@@ -15682,7 +15856,7 @@ CREATE TABLE `a_specialties` (
   `code` varchar(10) NOT NULL,
   `description` varchar(50) NOT NULL,
   `clean_url` varchar(20) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `a_specialties`
@@ -15720,7 +15894,7 @@ CREATE TABLE `a_specialties_match` (
   `description` varchar(100) DEFAULT NULL,
   `id` int DEFAULT NULL,
   `year` varchar(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `a_specialties_match`
@@ -15752,7 +15926,7 @@ CREATE TABLE `b_areas` (
   `ypepth_code` varchar(5) NOT NULL DEFAULT '0000',
   `full_name` varchar(40) NOT NULL DEFAULT 'null',
   `clean_url` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `b_areas`
@@ -16099,7 +16273,7 @@ CREATE TABLE `b_areas_match` (
   `description` varchar(100) DEFAULT NULL,
   `id` int DEFAULT NULL,
   `year` varchar(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `b_areas_match`
@@ -16221,7 +16395,7 @@ CREATE TABLE `b_bases` (
   `points` float NOT NULL,
   `how_many_in` int NOT NULL,
   `year` varchar(4) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `b_bases`
@@ -30610,7 +30784,7 @@ CREATE TABLE `b_schools` (
   `kallitexniko` tinyint NOT NULL DEFAULT '0',
   `to_delete` tinyint NOT NULL DEFAULT '0',
   `municipality_id` int NOT NULL DEFAULT '-1'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `b_schools`
@@ -34132,7 +34306,7 @@ INSERT INTO `b_schools` (`id`, `number`, `type`, `municipality`, `points`, `dide
 CREATE TABLE `b_school_types` (
   `id` tinyint NOT NULL,
   `description` varchar(40) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `b_school_types`
@@ -34157,7 +34331,7 @@ CREATE TABLE `b_specialties` (
   `description` varchar(160) NOT NULL,
   `ypepth_code` varchar(3) NOT NULL DEFAULT '000',
   `clean_url` varchar(20) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `b_specialties`
@@ -34391,7 +34565,7 @@ CREATE TABLE `b_specialties_match` (
   `description` varchar(100) DEFAULT NULL,
   `id` int DEFAULT NULL,
   `year` varchar(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `b_specialties_match`
@@ -34450,7 +34624,7 @@ CREATE TABLE `kladoi` (
   `id` int NOT NULL,
   `code` varchar(4) NOT NULL,
   `description` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `kladoi`
@@ -34508,7 +34682,7 @@ CREATE TABLE `municipalities` (
   `description` varchar(127) DEFAULT NULL,
   `a_area_id` int NOT NULL DEFAULT '-1',
   `b_area_id` int NOT NULL DEFAULT '-1'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `municipalities`
@@ -55271,7 +55445,7 @@ CREATE TABLE `provinces` (
   `A_telephone` varchar(10) NOT NULL,
   `A_fax` varchar(10) NOT NULL,
   `clean_url` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `provinces`
@@ -55350,7 +55524,7 @@ CREATE TABLE `regions` (
   `telephone` varchar(10) NOT NULL,
   `fax` varchar(10) NOT NULL,
   `clean_url` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `regions`
@@ -55475,7 +55649,7 @@ ALTER TABLE `a_areas`
 -- AUTO_INCREMENT for table `a_bases`
 --
 ALTER TABLE `a_bases`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3598;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3771;
 
 --
 -- AUTO_INCREMENT for table `a_schools`
